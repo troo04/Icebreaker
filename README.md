@@ -1,4 +1,5 @@
 # Icebreaker
+A discord bot meant to bring people closer :)
 
 # Inspiration
 Our inspiration for creating this project was our own experiences during this pandemic. Our ability to mingle/meet new people were negatively affected, due to many restrictions placed at school, at parks, movie theaters, and etc.
