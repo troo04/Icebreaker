@@ -172,8 +172,9 @@ async def person_finder(ctx):
       percentage = (most_answers_in_common / len(db[str(ctx.message.author)])) * 100
       
       embed=discord.Embed(title="You should get in touch with `@{}`".format(most_similar), description="{}% of your interests are alike!".format(round(percentage,2)), color=0xFBFF00)
-      embed.add_field(name="You both:", value=most_common_interests + "\n", inline=False)
-      await ctx.message.author.send(embed = embed)
+      print(most_common_interests)
+      ##embed.add_field(name="You both: ", value=most_common_interests, inline=False)
+      await ctx.message.author.send(embed=embed)
       
       
     else:
@@ -239,6 +240,7 @@ async def friends_finder(ctx):
 async def deleter(ctx):
   try:
     del db[str(ctx.message.author)]
+    del db[str(ctx.message.author) + "_id"]
     await ctx.send("Your profile has been successfully deleted!")
   except:
     await ctx.send("Sorry, no profile exists for you.")
